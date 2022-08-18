@@ -1,0 +1,13 @@
+CREATE table store(id integer primary key, fruit text,price integer, quantity integer, aisle integer);
+
+INSERT INTO store VALUES (1, "Bananas", 2, 4, 100);
+INSERT INTO store VALUES (2,"Apricots", 1,8,50), (3, "apple", 2,4,152), (4, "Oranges", 4,4,48), 
+(5,"peaches", 3,4,78), (6, "kiwis", 7,4,30), (7,"chocolate", 5,7,30), (8,"kitkats", 1,7,241), (9,"skittles", 1,7,156), 
+(10, "whoopers", 2,7,322), (11, "hot pockets", 4,2,170), (12, "chicken nuggets", 7,2,234), (13,"Hamburgers", 6,2,378),
+(14,"insulin",199,69,6969),(15, "amino", 69,69,6969),(16,"snickers", 137,69,1);
+
+--display the database ordered by price. 
+SELECT* FROM store order by price;
+
+--what is the sum of the quantity ordered by price. 
+select sum(quantity) from store order by price;
